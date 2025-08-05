@@ -134,6 +134,31 @@ body {
       align-items: center;
     }
   }
+  .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Image */
+.logo img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* Adjust spacing on smaller screens */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+}
+
+/* Optional: Add slight padding around the logo */
+.logo {
+  padding: 0.5rem 0;
+}
+
 </style>
 </head>
 <body>
@@ -141,7 +166,7 @@ body {
   <header class="navbar">
     <div class="container">
       <div class="logo">
-        <img src="images/logo.png" alt="kanyin nails logo" width="120">
+        <img src="images/kanyin-logo.png" alt="kanyin nails logo" width="120">
       </div>
       <nav>
         <ul class="nav-links">

@@ -261,3 +261,28 @@ main {
     padding: 0.6rem 1.2rem;
   }
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Image */
+.logo img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* Adjust spacing on smaller screens */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+}
+
+/* Optional: Add slight padding around the logo */
+.logo {
+  padding: 0.5rem 0;
+}
+
