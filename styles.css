@@ -1,21 +1,16 @@
-/* ==== GLOBAL RESET ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+  overflow-x: hidden;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 /* ==== NAVBAR ==== */
@@ -36,7 +31,9 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .nav-links li a {
