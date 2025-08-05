@@ -4,140 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-    }
-    h1 {
-        text-align: center;
-        color: #333;
-    }
-    .nail-item {
-        background: white;
-        padding: 20px;
-        margin: 10px auto;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .nail-item img {
-        max-width: 100%;
-        height: auto;
-    }
-    .nail-item h2 {
-        color: #555;
-    }
-    .nail-item button {
-        padding: 10px 15px;
-        background-color: #28a745;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .nail-item button:hover {
-        background-color: #218838;
-    }
-    footer {
-        text-align: center;
-        margin-top: 20px;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
 
-    footer h2 {
-        color: #333;
-    }
+        h1 {
+            text-align: center;
+            color: #e91e63;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
 
-    footer ul {
-        list-style: none;
-        padding: 0;
-    }   
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
 
-    footer ul li {
-        display: inline;
-        margin: 0 10px;
-    }
-</style>
+        .catalogue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .nail-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .nail-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .nail-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .nail-item h2 {
+            color: #555;
+            margin: 15px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .nail-item button {
+            padding: 10px 18px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nail-item button:hover {
+            background-color: #c2185b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        footer h2 {
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <section>
     <h1>Nail Catalogue</h1>
-    <p>Explore our collection of press on nails.</p>
-    </section>
+    <p>Explore our collection of press on nails and wears.</p>
 
-    <div class="nail-item">
-        <img src="images/Almond nail.jpg (2).JPG" alt="almond nail 1" width="200">
-        <h2> Almond Nail Design 1</h2>
-        <button>Add to Cart</button>
+    <div class="catalogue-grid">
+        <div class="nail-item">
+            <img src="images/Almond nail.jpg.JPG" alt="almond nail 1">
+            <h2>Almond Nail Design 1</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/Almond nail.jpg (2).JPG" alt="almond nail 2">
+            <h2>Almond Nail Design 2</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/Stiletto nail.jpg.JPG" alt="stiletto nail 1">
+            <h2>Stiletto Nail Design 1</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/Stiletto nail.jpg (2).JPG" alt="stiletto nail 2">
+            <h2>Stiletto Nail Design 2</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/Square Nail.jpg.JPG" alt="square nail 1">
+            <h2>Square Nail Design 1</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/Square nail.jpg (2).JPG" alt="square nail 2">
+            <h2>Square Nail Design 2</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/duck nail.jpg.jpeg" alt="duck nail 1">
+            <h2>Duck Nail Design 1</h2>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="nail-item">
+            <img src="images/duck nail 2.jpg.jpeg" alt="duck nail 2">
+            <h2>Duck Nail Design 2</h2>
+            <button>Add to Cart</button>
+        </div>
     </div>
-
-    <div class="nail-item">
-        <img src="images/Almond nail.jpg.JPG" alt="almond nail 2" width="200">
-        <h2> Almond Nail Design 2</h2>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="nail-item">
-        <img src="images/Stiletto nail.jpg.JPG" alt="stiletto nail 1" width="200">
-        <h2> StilettoNail Design 1</h2>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="nail-item">
-        <img src="images/Stiletto nail.jpg (2).JPG" alt="stiletto nail 2" width="200">
-        <h2> Stiletto Nail Design 2</h2>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="nail-item">
-        <img src="images/Square Nail.jpg.JPG" alt="square nail 1" width="200">
-        <h2> square Nail Design 1</h2>
-        <button>Add to Cart</button>
-     </div>
-
-     <div class="nail-item">
-        <img src="images/Square nail.jpg (2).JPG" alt="sqare nail 2" width="200">
-        <h2>Square Nail Design 2</h2>
-        <button>Add to Cart</button>
-     </div>
-
-    <div class="nail-item">
-        <img src="images/duck nail.jpg.jpeg" alt="duck nail 1" width="200">
-        <h2> Duck Nail Design 1</h2>
-        <button>Add to Cart</button>
-    </div>
-
-    <div class="nail-item">
-        <img src="images/duck nail 2.jpg.jpeg" alt="duck nail 2" width="200">
-        <h2> Duck Nail Design 2</h2>
-        <button>Add to Cart</button>
-    </div>
-    
 
     <footer>
         <h2>Follow us on social media</h2>
         <ul>
-            <li><a href="https://www.instagram.com/nail_technician_inibadan?igsh=ZHY5OGl1NXgyaG9i&utm_source=qr"><img src="images/logo-instagram.svg" alt="Instagram logo" width="20px"></a></li>
-            <li><a href="https://www.tiktok.com/@kanyin_nails"><img src="images/logo-tiktok.svg" alt="TikTok logo" width="20px"></a></li>
-            <li><a href="https://www.facebook.com"><img src="images/logo-facebook.svg" alt="Facebook logo" width="20px"></a></li>
-            <li><a href="https://wa.me/2348126106753"><img src="images/logo-whatsapp.svg" alt="WhatsApp logo" width="20px"></a></li>
+            <li><a href="https://www.instagram.com/nail_technician_inibadan?igsh=ZHY5OGl1NXgyaG9i&utm_source=qr"><img src="images/logo-instagram.svg" alt="Instagram logo" width="20"></a></li>
+            <li><a href="https://www.tiktok.com/@kanyin_nails?"><img src="images/logo-tiktok.svg" alt="TikTok logo" width="20"></a></li>
+            <li><a href="https://www.facebook.com"><img src="images/logo-facebook.svg" alt="Facebook logo" width="20"></a></li>
+            <li><a href="https://wa.me/2348126106753"><img src="images/logo-whatsapp.svg" alt="WhatsApp logo" width="20"></a></li>
         </ul>
-        <p>For more enquiries contact us at <a href="mailto">daudakabirat6@gmail.com</a></p>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-        </ul>   
+        <p>For more enquiries contact us at <a href="mailto:daudakabirat6@gmail.com">daudakabirat6@gmail.com</a></p>
         <p>&copy; 2025 Kanyin_Nails. All rights reserved.</p>
     </footer>
-
-
-
-    <!-- Add more nail items as needed -->
-    
 </body>
 </html>

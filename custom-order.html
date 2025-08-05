@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Order | Kanyin Nails</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff0f5;
+      color: #333;
+    }
+    .navbar {
+      background: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      color: #e91e63;
+      font-weight: 600;
+    }
+    .hero {
+      background: linear-gradient(145deg, #ffe0ed, #fff0f5);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .form {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .form label {
+      font-weight: 600;
+      display: block;
+      margin: 1rem 0 0.3rem;
+    }
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .form button {
+      margin-top: 1.5rem;
+      padding: 12px 25px;
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background: #fff;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="kanyin nails logo" width="120">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Place Your Custom Order</h1>
+      <p>Let us bring your nail vision to life. Fill out the form below and we'll reach out!</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <form action="/submit-order" method="POST" class="form">
+      <label for="name">Full Name</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="style">Preferred Nail Style</label><br>
+      <select id="style" name="style" required>
+        <option value="almond">Almond</option>
+        <option value="square">Square</option>
+        <option value="stiletto">Stiletto</option>
+        <option value="coffin">Coffin/Ballerina</option>
+      </select><br><br>
+
+      <label for="color">Color or Theme</label><br>
+      <input type="text" id="color" name="color" placeholder="e.g., pink marble, nude, glitter tips"><br><br>
+
+      <label for="note">Additional Details</label><br>
+      <textarea id="note" name="note" rows="4"></textarea><br><br>
+
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 kanyin nails. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
