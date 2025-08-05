@@ -34,7 +34,7 @@ main {
 
 /* ==== NAVBAR ==== */
 .navbar {
-  background-color: #111;
+  background-color: white;
   padding: 1.2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   top: 0;
@@ -57,7 +57,7 @@ main {
 }
 
 .nav-links li a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
