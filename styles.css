@@ -1,9 +1,26 @@
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+html body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+  body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main{
+  flex: 1;
 }
 
 .container {
