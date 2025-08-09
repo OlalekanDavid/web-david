@@ -2,11 +2,6 @@
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
-
-// Cart Elements
 const cartBtn = document.getElementById('cartBtn');
 const cartOverlay = document.getElementById('cartOverlay');
 const cartDrawer = document.getElementById('cartDrawer');
@@ -17,6 +12,21 @@ const cartCountEl = document.getElementById('cartCount');
 
 const CART_STORAGE_KEY = 'kanyin_nails_cart';
 let cart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
+
+// Hamburger menu toggle on click
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent document click from firing immediately
+  navLinks.classList.toggle('show');
+});
+
+// Close hamburger menu if clicking outside nav and hamburger
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('show') &&
+      !navLinks.contains(e.target) &&
+      e.target !== hamburger) {
+    navLinks.classList.remove('show');
+  }
+});
 
 function updateCartCount() {
   const count = cart.reduce((sum, item) => sum + item.qty, 0);
@@ -109,5 +119,5 @@ cartBtn.addEventListener('click', openCart);
 closeCartBtn.addEventListener('click', closeCart);
 cartOverlay.addEventListener('click', closeCart);
 
-// Initialize
+// Initialize cart on page load
 saveCart();

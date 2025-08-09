@@ -482,53 +482,5 @@ main {
   background: #e91e63;
   color: white;
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Wrapper for hamburger + cart aligned right */
-.menu-cart-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Hamburger and cart button styling */
-.hamburger,
-.cart-btn {
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: #333;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.hamburger:hover,
-.cart-btn:hover {
-  background-color: #fce4ec;
-  color: #e91e63;
-}
-
-/* On larger screens, nav-links show inline */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-/* On small screens, hide nav-links and show hamburger */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-}
 
 
