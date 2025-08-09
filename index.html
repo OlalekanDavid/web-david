@@ -12,22 +12,50 @@
 
   <!-- Navigation Bar -->
   <header class="navbar" id="navbar">
-    <div class="container">
-      <div class="logo">
-        <img src="images/kanyin-logo.png" alt="kanyin nails logo" width="120">
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#navbar">Home</a></li>
-          <li><a href="Nail-Catalogue.html">Catalogue</a></li>
-          <li><a href="custom-order.html">Custom Order</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
-        </ul>
-      </nav>
+  <div class="container">
+    <div class="logo">
+      <img src="images/kanyin-logo.png" alt="kanyin nails logo" width="120">
     </div>
-  </header>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#navbar">Home</a></li>
+        <li><a href="Nail-Catalogue.html">Catalogue</a></li>
+        <li><a href="custom-order.html">Custom Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+
+    <!-- Container for hamburger and cart -->
+    <div class="menu-cart-wrapper">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">&#9776;</button>
+      <button class="cart-btn" id="cartBtn" aria-label="Open shopping cart">
+        🛒 <span id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cartOverlay" tabindex="-1" aria-hidden="true"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping cart">
+    <button class="btn-close" id="closeCart" aria-label="Close cart">✕</button>
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be injected here by JavaScript -->
+    </div>
+    <div class="cart-total">
+      Total: ₦<span id="cartTotal">0.00</span>
+    </div>
+    <div class="cart-actions">
+      <a href="Nail-Catalogue.html" class="btn-view" aria-label="View full catalogue">View Catalogue</a>
+    </div>
+  </aside>
 
   <main>
     <!-- Hero Section -->
@@ -46,37 +74,37 @@
         <h2>Why Choose Kanyin Nails?</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <img src="/images/fast.png" alt="Fast Delivery">
+            <img src="images/fast.png" alt="Fast Delivery">
             <h3>Fast & Reliable Delivery</h3>
             <p>Get your favorite nails shipped quickly and safely nationwide.</p>
           </div>
 
           <div class="feature-card">
-            <img src="/images/money.jpg" alt="Affordable Prices">
+            <img src="images/money.jpg" alt="Affordable Prices">
             <h3>Affordable Prices</h3>
             <p>Enjoy top-quality nails without breaking the bank.</p>
           </div>
 
           <div class="feature-card">
-            <img src="/images/custom.jpg" alt="Custom Designs">
+            <img src="images/custom.jpg" alt="Custom Designs">
             <h3>Custom Designs</h3>
             <p>Create your dream set – we’ll bring your ideas to life!</p>
           </div>
 
           <div class="feature-card">
-            <img src="/images/quality.jpg" alt="Premium Quality">
+            <img src="images/quality.jpg" alt="Premium Quality">
             <h3>Premium Quality</h3>
             <p>We use only the best materials to ensure durability and comfort.</p>
           </div>
 
           <div class="feature-card">
-            <img src="/images/reusable.jpg" alt="Reusable Nails">
+            <img src="images/reusable.jpg" alt="Reusable Nails">
             <h3>Reusable Sets</h3>
             <p>Get more value for your money with our reusable nail designs.</p>
           </div>
 
           <div class="feature-card">
-            <img src="/images/nail tips.jpg" alt="Nail Care Support">
+            <img src="images/nail tips.jpg" alt="Nail Care Support">
             <h3>Nail Care Support</h3>
             <p>We provide tips and assistance to keep your nails looking flawless.</p>
           </div>
@@ -98,14 +126,15 @@
   <footer class="footer">
     <div class="container">
       <div class="social-links">
-        <a href="https://facebook.com">Facebook</a> |
-        <a href="https://instagram.com/nail_technician_inibadan?">Instagram</a> |
-        <a href="https://tiktok.com/@kanyin_nails?">TikTok</a> |
-        <a href="https://wa.me/2348126106753">WhatsApp</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+        <a href="https://instagram.com/nail_technician_inibadan?" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://tiktok.com/@kanyin_nails?" target="_blank" rel="noopener noreferrer">TikTok</a> |
+        <a href="https://wa.me/2348126106753" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
       <p>&copy; 2025 kanyin nails. All rights reserved.</p>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

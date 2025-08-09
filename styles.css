@@ -285,4 +285,250 @@ main {
 .logo {
   padding: 0.5rem 0;
 }
+/* ==== Hamburger menu ==== */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+  color: #e91e63;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-radius: 0 0 0 8px;
+    padding: 0.5rem 1rem;
+    z-index: 1001;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+/* ==== Cart button ==== */
+.cart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+  color: #e91e63;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+#cartCount {
+  background: #e91e63;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  font-weight: bold;
+}
+
+/* ==== Cart Overlay ==== */
+.cart-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==== Cart Drawer ==== */
+.cart-drawer {
+  position: fixed;
+  top: 0; right: -350px;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.active {
+  right: 0;
+}
+
+.cart-items {
+  flex-grow: 1;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+.cart-item-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-item-controls button {
+  border: 1px solid #e91e63;
+  background: none;
+  color: #e91e63;
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: #e91e63;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.cart-total {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-view {
+  background: #e91e63;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-view:hover {
+  background: #c2185b;
+}
+
+.btn-close {
+  border: 1px solid #e91e63;
+  background: none;
+  color: #e91e63;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background: #e91e63;
+  color: white;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Wrapper for hamburger + cart aligned right */
+.menu-cart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hamburger and cart button styling */
+.hamburger,
+.cart-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger:hover,
+.cart-btn:hover {
+  background-color: #fce4ec;
+  color: #e91e63;
+}
+
+/* On larger screens, nav-links show inline */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* On small screens, hide nav-links and show hamburger */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 
