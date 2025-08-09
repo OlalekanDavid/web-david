@@ -261,6 +261,7 @@ main {
     padding: 0.6rem 1.2rem;
   }
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -285,6 +286,7 @@ main {
 .logo {
   padding: 0.5rem 0;
 }
+
 /* ==== Hamburger menu ==== */
 .hamburger {
   font-size: 28px;
@@ -369,23 +371,25 @@ main {
   box-shadow: -3px 0 10px rgba(0,0,0,0.2);
   padding: 20px;
   box-sizing: border-box;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  z-index: 1000;
   display: flex;
   flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 
 .cart-drawer.active {
   right: 0;
 }
 
+/* Scroll only the items list, keep footer/buttons visible */
 .cart-items {
   flex-grow: 1;
   margin-top: 10px;
   overflow-y: auto;
+  max-height: calc(100vh - 180px); /* leave space for total + buttons */
 }
 
+/* Cart Item styling */
 .cart-item {
   display: flex;
   align-items: center;
@@ -441,11 +445,14 @@ main {
   margin-left: 8px;
 }
 
+/* Cart total and actions at bottom */
 .cart-total {
   border-top: 1px solid #ddd;
   padding-top: 10px;
   font-size: 18px;
   font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 10px;
 }
 
 .cart-actions {
@@ -453,8 +460,10 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0; /* prevent shrinking */
 }
 
+/* Buttons inside cart */
 .btn-view {
   background: #e91e63;
   color: white;
@@ -462,6 +471,7 @@ main {
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .btn-view:hover {
@@ -476,11 +486,10 @@ main {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn-close:hover {
   background: #e91e63;
   color: white;
 }
-
-
